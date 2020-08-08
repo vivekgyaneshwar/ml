@@ -5,18 +5,25 @@ from numpy import pi
 a = np.arange(15).reshape(3, 5)
 a
 #array([[ 0,  1,  2,  3,  4],   [ 5,  6,  7,  8,  9],     [10, 11, 12, 13, 14]])
+
 a.shape
 #(3, 5)
+
 a.ndim
 #2
+
 a.dtype.name
 #'int64'
+
 a.itemsize
 #8
+
 a.size
 #15
+
 type(a)
 #<class 'numpy.ndarray'>
+
 b = np.array([6, 7, 8])
 b
 #array([6, 7, 8])
@@ -76,3 +83,41 @@ print(b**2)
 print(10*np.sin(a))
 
 print(a<35)
+
+
+A = np.array( [[1,1], [0,1]] )
+B = np.array( [[2,0],[3,4]] )
+print(A * B)                      # elementwise product
+
+print(A @ B  )                     # matrix product
+
+print(A.dot(B)  )                  # another matrix product
+
+
+rg = np.random.default_rng(1)     # create instance of default random number generator
+print(rg)
+a = np.ones((2,3), dtype=int)
+print(a)
+b = rg.random((2,3))
+print(b)
+a *= 3
+print(a)
+
+b += a
+print(b)
+
+#a += b                            # b is not automatically converted to integer type
+
+a = np.ones(3, dtype=np.int32)
+b = np.linspace(0,pi,3)
+print(b.dtype.name)
+
+c = a+b
+print(c)
+
+print(c.dtype.name)
+
+d = np.exp(c*1j)
+d
+
+print(d.dtype.name)
