@@ -121,3 +121,13 @@ d = np.exp(c*1j)
 d
 
 print(d.dtype.name)
+
+b = np.arange(12).reshape(3,4)
+b
+
+
+b.sum(axis=0)                            # sum of each column
+
+
+b.min(axis=1)                            # min of each row
+
