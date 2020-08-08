@@ -26,10 +26,16 @@ a
 a.dtype
 #dtype('int64')
 b = np.array([1.2, 3.5, 5.1])
-b.dtype
+b.dtype 
 #dtype('float64')
 
 
 np.zeros((3, 4))
 np.ones( (2,3,4), dtype=np.int16 )                # dtype can also be specified
 np.empty( (2,3) )                                 # uninitialized
+
+
+print(np.arange( 10, 30, 5 ))
+#array([10, 15, 20, 25])
+print(np.arange( 0, 2, 0.3 ) )              # it accepts float arguments
+#array([0. , 0.3, 0.6, 0.9, 1.2, 1.5, 1.8])
