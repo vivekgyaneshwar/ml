@@ -1,4 +1,5 @@
 import numpy as np
+import sys as sys
 from numpy import pi
 
 a = np.arange(15).reshape(3, 5)
@@ -56,3 +57,22 @@ print(b)
 
 c = np.arange(24).reshape(2,3,4)         # 3d array
 print(c)
+
+print(np.arange(10000))
+
+print(np.arange(10000).reshape(100,100))
+
+np.set_printoptions(threshold=sys.maxsize)
+
+a = np.array( [20,30,40,50] )
+b = np.arange( 4 )
+print(b)
+
+c = a-b
+print(c)
+
+print(b**2)
+
+print(10*np.sin(a))
+
+print(a<35)
