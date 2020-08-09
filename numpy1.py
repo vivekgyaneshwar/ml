@@ -55,7 +55,7 @@ np.linspace( 0, 2, 9 )                 # 9 numbers from 0 to 2
 x = np.linspace( 0, 2*pi, 100 )        # useful to evaluate function at lots of points
 f = np.sin(x)
 
-
+##Printing Arrays
 
 print(a)
 
@@ -71,6 +71,7 @@ print(np.arange(10000).reshape(100,100))
 
 np.set_printoptions(threshold=sys.maxsize)
 
+##Basic Operation
 a = np.array( [20,30,40,50] )
 b = np.arange( 4 )
 print(b)
@@ -139,3 +140,28 @@ np.sqrt(B)
 C = np.array([2., -1., 4.])
 np.add(B, C)
 
+###Indexing, Slicing and Iterating
+
+a = np.arange(10)**3
+print(a)
+a[2]
+a[2:5]
+# equivalent to a[0:6:2] = 1000;
+# from start to position 6, exclusive, set every 2nd element to 1000
+a[:6:2] = 1000
+a
+print(a[ : :-1] )                                # reversed a
+
+for i in a:
+    print(i**(1/3.))
+
+print(b[-1])                                  # the last row. Equivalent to b[-1,:]
+
+for element in b.flat:
+    print(element)
+
+##shape
+a = np.floor(10*rg.random((3,4)))
+print(a)
+
+print(a.shape)
