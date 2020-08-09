@@ -131,3 +131,11 @@ b.sum(axis=0)                            # sum of each column
 
 b.min(axis=1)                            # min of each row
 
+B = np.arange(3)
+B
+
+np.exp(B)
+np.sqrt(B)
+C = np.array([2., -1., 4.])
+np.add(B, C)
+
