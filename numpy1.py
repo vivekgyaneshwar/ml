@@ -165,3 +165,12 @@ a = np.floor(10*rg.random((3,4)))
 print(a)
 
 print(a.shape)
+
+a.ravel()  # returns the array, flattened
+a.reshape(6,2)  # returns the array with a modified shape
+
+print(a.T)  # returns the array, transposed
+
+print(a.T.shape)
+
+print(a.shape)
